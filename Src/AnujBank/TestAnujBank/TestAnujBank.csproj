@@ -47,6 +47,12 @@
     <Compile Include="TestAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AnujBank\AnujBank.csproj">
+      <Project>{FE6A3377-5568-4B7F-BF89-C27F3C8208A0}</Project>
+      <Name>AnujBank</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
