@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnujBank", "AnujBank\AnujBank.csproj", "{FE6A3377-5568-4B7F-BF89-C27F3C8208A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAnujBank", "TestAnujBank\TestAnujBank.csproj", "{9B2E76C1-608A-46D8-AFB1-366FFBE85366}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE6A3377-5568-4B7F-BF89-C27F3C8208A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE6A3377-5568-4B7F-BF89-C27F3C8208A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE6A3377-5568-4B7F-BF89-C27F3C8208A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE6A3377-5568-4B7F-BF89-C27F3C8208A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B2E76C1-608A-46D8-AFB1-366FFBE85366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B2E76C1-608A-46D8-AFB1-366FFBE85366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B2E76C1-608A-46D8-AFB1-366FFBE85366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B2E76C1-608A-46D8-AFB1-366FFBE85366}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
