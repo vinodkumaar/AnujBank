@@ -1,29 +1,28 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace AnujBank
 {
     public class Account
     {
-        public Account(AccountId id,Client client)
+        public Account(AccountId id,ClientID clientId)
         {
-            if (client == null)
+            if (clientId == null)
                 throw new NoClientException("You must provide client"); 
             AccountNo = id;
-            Client = client;
-            Client.AddAccount(this);
+            ClientId = clientId;
         }
         public AccountId AccountNo { get; private set; }
-        public Client Client { get; private set; }
+        public ClientID ClientId { get; private set; }
         public double Balance { get; set; }
         public DateTime LastUpdatedDate { get; set; }
 
         public int GetAccountNumber()
         {
             return AccountNo.Id;
+        }
+        public string GetClientId()
+        {
+            return ClientId.Id;
         }
     }
 
@@ -35,34 +34,7 @@ namespace AnujBank
         }
     }
 
-    public class Client
-    {
-
-        private ClientID _id;
-        private List<Account> _accounts;
-
-        public Client(ClientID clientId)
-        {
-            _id = clientId;
-            _accounts = new List<Account>();
-        }
-        public Account[] Accounts
-        {
-            get { return this._accounts.ToArray(); }
-
-        }
-        
-        public string GetId()
-        {
-            return _id.Id;
-        }
-
-        public void AddAccount(Account account)
-        {
-            this._accounts.Add(account);
-        }
-
-    }
+    
     
     public class ClientID
     {
