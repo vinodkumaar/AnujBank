@@ -1,8 +1,12 @@
+<<<<<<< HEAD
+﻿namespace TestAnujBank
+=======
 ﻿using System;
 using AnujBank;
 using NUnit.Framework;
 
 namespace TestAnujBank
+>>>>>>> 561b47a79bd22e0cfa9d5eb2d2baa237abbe7407
 {
     [TestFixture]
     public class TestAccount
