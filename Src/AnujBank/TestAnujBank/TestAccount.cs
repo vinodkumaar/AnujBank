@@ -15,10 +15,18 @@ namespace TestAnujBank
                               {Balance = 100.00, LastUpdatedDate = DateTime.Now};
             Assert.AreEqual(account.GetAccountNumber(), 12341234);
         }
-        [Test, ExpectedException(typeof(NoClientException))]
+        [Test]
         public void ShouldBeAbleRaiseErrorInCaseNoClientProvided()
         {
-            var account = new Account(new AccountId(12341234), null) { Balance = 100.00, LastUpdatedDate = DateTime.Now };
+            try
+            {
+                var account = new Account(new AccountId(12341234), null) { Balance = 100.00, LastUpdatedDate = DateTime.Now };
+                throw new Exception();
+            }
+            catch (NoClientException)
+            {
+                
+            }
         }
     }
 }

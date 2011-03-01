@@ -2,17 +2,21 @@
     <description>
         Liquidity Management
     </description>
-<loadtasks assembly="Tools\nantcontrib-0.85\bin\NAnt.Contrib.Tasks.dll"/>    
-  <target name="build">
-	<msbuild project="AnujBank.sln" verbosity="Quiet">
-		<arg value="/t:Clean" />
-    </msbuild>
+	<loadtasks assembly="Tools\nantcontrib-0.85\bin\NAnt.Contrib.Tasks.dll"/>    
+	<target name="build">
+		<msbuild project="AnujBank.sln" verbosity="Quiet">
+			<arg value="/t:Clean" />
+		</msbuild>
 	
-	<msbuild project="AnujBank.sln" verbosity="Quiet">
-		<arg value="/t:Rebuild" />
-    </msbuild>
-	
-	<echo message="Welcome to Anuj Bank"></echo>
-  </target>
+		<msbuild project="AnujBank.sln" verbosity="Quiet">
+			<arg value="/t:Rebuild" />
+		</msbuild>
+	</target>
 
+	<target name="test" depends="build">
+		<nunit2>
+			<formatter type="Plain" />
+			<test assemblyname="TestAnujBank\bin\Debug\TestAnujBank.dll"/>
+		</nunit2>
+	</target>
 </project>
