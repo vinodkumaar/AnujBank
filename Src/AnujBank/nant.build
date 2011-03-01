@@ -1,4 +1,4 @@
-<project name="AnujBank" default="build" basedir=".">
+<project name="AnujBank" default="test" basedir=".">
     <description>
         Liquidity Management
     </description>
