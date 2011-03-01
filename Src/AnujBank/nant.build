@@ -1,0 +1,18 @@
+<project name="AnujBank" default="build" basedir=".">
+    <description>
+        Liquidity Management
+    </description>
+<loadtasks assembly="Tools\nantcontrib-0.85\bin\NAnt.Contrib.Tasks.dll"/>    
+  <target name="build">
+	<msbuild project="AnujBank.sln" verbosity="Quiet">
+		<arg value="/t:Clean" />
+    </msbuild>
+	
+	<msbuild project="AnujBank.sln" verbosity="Quiet">
+		<arg value="/t:Rebuild" />
+    </msbuild>
+	
+	<echo message="Welcome to Anuj Bank"></echo>
+  </target>
+
+</project>
