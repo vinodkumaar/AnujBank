@@ -8,7 +8,6 @@ namespace TestAnujBank
     [TestFixture]
     public class TestAccount
     {
-        
         [Test]
         public void ShouldBeAbleToCreateAnAccount()
         {
@@ -17,6 +16,7 @@ namespace TestAnujBank
                               {Balance = 100.00, LastUpdatedDate = DateTime.Now};
             Assert.AreEqual(account.GetAccountNumber(), 12341234);
         }
+
         [Test]
         public void ShouldBeAbleRaiseErrorInCaseNoClientProvided()
         {

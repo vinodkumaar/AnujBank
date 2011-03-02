@@ -13,7 +13,7 @@ namespace TestAnujBank
         [Test]
         public void ShouldBeAbleToAddAStructure()
         {
-            var clientId = new ClientId("ABCD1234");
+            var clientId = new ClientId("ABC123");
             var account1 = new Account(new AccountId(12341234), clientId);
             var account2 = new Account(new AccountId(12341235), clientId);
             Accounts accounts = new Accounts(account1, account2);

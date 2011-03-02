@@ -10,7 +10,7 @@ namespace TestAnujBank
         [Test]
         public void ShouldNotBeAbleToCreateAStructureWithLessThanTwoSourceAccounts()
         {
-            var clientId = new ClientId("ABCD1234");
+            var clientId = new ClientId("ABC123");
             var account1 = new Account(new AccountId(12341234), clientId);
             var accounts = new Accounts(account1);
             Assert.Throws<ArgumentException>(() => new Structure(accounts));
