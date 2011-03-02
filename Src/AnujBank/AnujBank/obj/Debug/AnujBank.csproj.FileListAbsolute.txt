@@ -1,5 +1,0 @@
-E:\More\Dev BootCamp\Project\AnujBank\Src\AnujBank\AnujBank\bin\Debug\AnujBank.dll
-E:\More\Dev BootCamp\Project\AnujBank\Src\AnujBank\AnujBank\bin\Debug\AnujBank.pdb
-E:\More\Dev BootCamp\Project\AnujBank\Src\AnujBank\AnujBank\obj\Debug\ResolveAssemblyReference.cache
-E:\More\Dev BootCamp\Project\AnujBank\Src\AnujBank\AnujBank\obj\Debug\AnujBank.dll
-E:\More\Dev BootCamp\Project\AnujBank\Src\AnujBank\AnujBank\obj\Debug\AnujBank.pdb

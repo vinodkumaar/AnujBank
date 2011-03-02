@@ -4,15 +4,16 @@ namespace AnujBank
 {
     public class Account
     {
-        public Account(AccountId id,ClientID clientId)
+        public Account(AccountId id, ClientId clientId)
         {
             if (clientId == null)
-                throw new NoClientException("You must provide client"); 
+                throw new ArgumentException("You must provide client");
             AccountNo = id;
             ClientId = clientId;
+
         }
         public AccountId AccountNo { get; private set; }
-        public ClientID ClientId { get; private set; }
+        public ClientId ClientId { get; private set; }
         public double Balance { get; set; }
         public DateTime LastUpdatedDate { get; set; }
 
@@ -22,42 +23,36 @@ namespace AnujBank
         }
         public string GetClientId()
         {
+
             return ClientId.Id;
         }
-    }
 
-    public class NoClientException : Exception
-    {
-        public NoClientException(string message) : base(message)
+        public bool Equals(Account other)
         {
-            
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+            return Equals(other.AccountNo, AccountNo) && Equals(other.ClientId, ClientId);
         }
-    }
 
-    
-    
-    public class ClientID
-    {
-      
-        public ClientID(string id)
+        public override bool Equals(object obj)
         {
-            Id = id;
-         }
-
-        public string Id { get; set; }
-     
-    }
-    public class AccountId
-    {
-
-        public AccountId(int id)
-        {
-            Id = id;
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != typeof(Account)) return false;
+            return Equals((Account)obj);
         }
-        public int Id { get; set; }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int result = (AccountNo != null ? AccountNo.GetHashCode() : 0);
+                result = (result * 397) ^ (ClientId != null ? ClientId.GetHashCode() : 0);
+                result = (result * 397) ^ Balance.GetHashCode();
+                result = (result * 397) ^ LastUpdatedDate.GetHashCode();
+                return result;
+            }
+        }
 
     }
-    
-    
-
 }

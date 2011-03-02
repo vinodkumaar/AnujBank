@@ -41,6 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
+    <Compile Include="AccountId.cs" />
+    <Compile Include="ClientId.cs" />
+    <Compile Include="Feed.cs" />
+    <Compile Include="InvalidAccountIdException.cs" />
+    <Compile Include="InvalidClientIdException.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
