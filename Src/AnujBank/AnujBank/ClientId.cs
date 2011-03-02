@@ -1,4 +1,4 @@
-﻿using System.Text.RegularExpressions;
+﻿﻿using System.Text.RegularExpressions;
 
 namespace AnujBank
 {
@@ -39,6 +39,4 @@ namespace AnujBank
             if (!regEx.IsMatch(Id)) throw new InvalidClientIdException("Invalid Client Id");
 
         }
-
-    }
 }

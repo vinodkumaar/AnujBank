@@ -47,7 +47,11 @@
     <Compile Include="InvalidAccountIdException.cs" />
     <Compile Include="InvalidClientIdException.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="Accounts.cs" />
+    <Compile Include="Client.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structure.cs" />
+    <Compile Include="Structures.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

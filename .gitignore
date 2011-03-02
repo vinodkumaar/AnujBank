@@ -3,3 +3,5 @@ obj
 _ReSharper*
 *Resharper*
 *AnujBank.suo
+*.user
+*.suo
