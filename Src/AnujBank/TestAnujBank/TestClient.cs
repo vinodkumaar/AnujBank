@@ -13,8 +13,10 @@ namespace TestAnujBank
         [Test]
         public void ShouldBeAbleAddAStructure()
         {
-            ClientId clientId = new ClientId();
-            Accounts accounts = new Accounts(new Account(), new Account());
+            var clientId = new ClientId("ABCD1234");
+            var account1 = new Account(new AccountId(12341234), clientId);
+            var account2 = new Account(new AccountId(12341235), clientId);
+            Accounts accounts = new Accounts(account1, account2);
             var structure = new Structure(accounts);
             var client = new Client(clientId, accounts);
             client.AddStructure(structure);

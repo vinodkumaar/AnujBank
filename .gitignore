@@ -1,7 +1,5 @@
-bin
-obj
-_ReSharper*
+bin/**/*
+obj/**/*
 *Resharper*
-*AnujBank.suo
 *.user
 *.suo

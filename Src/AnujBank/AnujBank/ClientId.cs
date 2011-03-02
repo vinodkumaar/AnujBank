@@ -4,7 +4,6 @@ namespace AnujBank
 {
     public class ClientId
     {
-
         public ClientId(string id)
         {
 
@@ -39,4 +38,13 @@ namespace AnujBank
             if (!regEx.IsMatch(Id)) throw new InvalidClientIdException("Invalid Client Id");
 
         }
+      
+        public ClientId(string id)
+        {
+            Id = id;
+        }
+
+        public string Id { get; set; }
+     
+    }
 }

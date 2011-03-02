@@ -53,6 +53,5 @@ namespace AnujBank
                 return result;
             }
         }
-
     }
 }
