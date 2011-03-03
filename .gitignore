@@ -1,5 +1,9 @@
 bin/**/*
 obj/**/*
-*Resharper*
+*ReSharper*
 *.user
 *.suo
+*ReSharper/**/
+*bin
+*obj
+*.cache
