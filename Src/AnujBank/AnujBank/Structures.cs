@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AnujBank
 {
@@ -8,7 +10,13 @@ namespace AnujBank
 
         public void Add(Structure structure)
         {
+            if (HasOverlappingAccount(structure)) throw new ArgumentException("Cannot add two structure containing same accounts.");
             structureSet.Add(structure);
+        }
+
+        private bool HasOverlappingAccount(Structure newStructure)
+        {
+            return structureSet.Any(structure => structure.SharesAccountWith(newStructure));
         }
 
         public bool Contains(Structure structure)

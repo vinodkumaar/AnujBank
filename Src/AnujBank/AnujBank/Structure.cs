@@ -11,5 +11,10 @@ namespace AnujBank
             if(sourceClientAccounts.Count < 2) throw new ArgumentException("A structure must have at least 2 source accounts.");
             this.sourceClientAccounts = sourceClientAccounts;
         }
+
+        public bool SharesAccountWith(Structure newStructure)
+        {
+            return sourceClientAccounts.SharesAccountWith(newStructure.sourceClientAccounts);
+        }
     }
 }

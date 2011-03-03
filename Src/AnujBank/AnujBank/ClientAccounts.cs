@@ -1,30 +1,41 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace AnujBank
 {
-    public class ClientAccounts
-    {
-        private readonly Account[] _accounts;
+   public class ClientAccounts
+   {
+      private readonly HashSet<Account> accounts;
 
-        public ClientAccounts(params Account[] accounts)
-        {
-           Validate(accounts);
-           _accounts = accounts;
-        }
+      public ClientAccounts()
+      {
+         accounts = new HashSet<Account>();
+      }
 
-       private static void Validate(Account[] accounts)
+      public int Count
+      {
+         get { return accounts.Count; }
+      }
+
+      public void Add(Account newAccount)
+      {
+         Validate(newAccount);
+         accounts.Add(newAccount);
+      }
+
+      private void Validate(Account newAccount)
+      {
+         string clientId = newAccount.GetClientId();
+         if (accounts.Any(account => account.GetClientId() != clientId))
+         {
+            throw new ArgumentException("Account from two different clients cannot be added.");
+         }
+      }
+
+       public bool SharesAccountWith(ClientAccounts clientAccounts)
        {
-          string clientId = accounts[0].GetClientId();
-          if(accounts.Any(account => account.GetClientId() != clientId))
-          {
-             throw new ArgumentException("Account from two different clients cannot be added.");
-          }
+           return accounts.Overlaps(clientAccounts.accounts);
        }
-
-       public int Count
-        {
-            get { return _accounts.Length; }
-        }
-    }
+   }
 }

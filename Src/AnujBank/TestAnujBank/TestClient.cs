@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using AnujBank;
+﻿using AnujBank;
 using NUnit.Framework;
 
 namespace TestAnujBank
@@ -16,7 +12,9 @@ namespace TestAnujBank
             var clientId = new ClientId("ABC123");
             var account1 = new Account(new AccountId(12341234), clientId);
             var account2 = new Account(new AccountId(12341235), clientId);
-            ClientAccounts clientAccounts = new ClientAccounts(account1, account2);
+            var clientAccounts = new ClientAccounts();
+            clientAccounts.Add(account1);
+            clientAccounts.Add(account2);
             var structure = new Structure(clientAccounts);
             var client = new Client(clientId, clientAccounts);
             client.AddStructure(structure);
