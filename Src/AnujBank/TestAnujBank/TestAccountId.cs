@@ -10,9 +10,9 @@ namespace TestAnujBank
         [Test]
         public void ShouldBeAbleToCreateAccountIdWithEightDigits()
         {
-            var accountId = new AccountId(98765412);
-
+            new AccountId(98765412);
         }
+
         [Test]
         public void ShouldNotCreateAccountIdWithAnythingOtherThenEightDigits()
         {

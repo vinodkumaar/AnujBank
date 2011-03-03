@@ -35,6 +35,6 @@ namespace AnujBank
         {
             var regEx = new Regex("^[0-9]{8}$");
             if (!regEx.IsMatch(Id.ToString())) throw new InvalidAccountIdException("Invalid Account Id");
-        }        
+        }
     }
 }

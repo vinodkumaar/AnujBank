@@ -4,6 +4,7 @@ namespace AnujBank
 {
     public class Account
     {
+
         public Account(AccountId id, ClientId clientId)
         {
             if (clientId == null)
@@ -12,8 +13,8 @@ namespace AnujBank
             ClientId = clientId;
 
         }
-        public AccountId AccountNo { get; private set; }
-        public ClientId ClientId { get; private set; }
+        private AccountId AccountNo { get;  set; }
+        private ClientId ClientId { get;  set; }
         public double Balance { get; set; }
         public DateTime LastUpdatedDate { get; set; }
 
@@ -53,5 +54,6 @@ namespace AnujBank
                 return result;
             }
         }
+
     }
 }

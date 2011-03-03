@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestFeedProcessor.cs" />
     <Compile Include="TestPayment.cs" />
     <Compile Include="TestPaymentInstructionService.cs" />
     <Compile Include="TestStructure.cs" />
