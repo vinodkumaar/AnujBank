@@ -41,8 +41,8 @@ namespace TestAnujBank
             clientAccounts3.Add(account3);
             var structure3 = new Structure(clientAccounts3);
 
-            Assert.IsTrue(structure1.SharesAccountWith(structure2));
-            Assert.IsFalse(structure1.SharesAccountWith(structure3));
+            Assert.IsTrue(structure1.SharesASourceAccountWith(structure2));
+            Assert.IsFalse(structure1.SharesASourceAccountWith(structure3));
 
         }
     }

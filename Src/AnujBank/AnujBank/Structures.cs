@@ -16,7 +16,7 @@ namespace AnujBank
 
         private bool HasOverlappingAccount(Structure newStructure)
         {
-            return structureSet.Any(structure => structure.SharesAccountWith(newStructure));
+            return structureSet.Any(structure => structure.SharesASourceAccountWith(newStructure));
         }
 
         public bool Contains(Structure structure)

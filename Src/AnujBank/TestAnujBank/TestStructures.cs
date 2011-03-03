@@ -44,7 +44,7 @@ namespace TestAnujBank
             var structures = new Structures();
             structures.Add(structure1);
 
-            Assert.Throws<ArgumentException>(() => structures.Add(structure1));
+            Assert.Throws<ArgumentException>(() => structures.Add(structure2));
         }
     }
 }

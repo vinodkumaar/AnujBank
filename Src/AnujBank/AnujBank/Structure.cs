@@ -12,7 +12,7 @@ namespace AnujBank
             this.sourceClientAccounts = sourceClientAccounts;
         }
 
-        public bool SharesAccountWith(Structure newStructure)
+        public bool SharesASourceAccountWith(Structure newStructure)
         {
             return sourceClientAccounts.SharesAccountWith(newStructure.sourceClientAccounts);
         }
