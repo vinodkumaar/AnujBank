@@ -48,7 +48,7 @@
     <Compile Include="InvalidAccountIdException.cs" />
     <Compile Include="InvalidClientIdException.cs" />
     <Compile Include="IRepository.cs" />
-    <Compile Include="Accounts.cs" />
+    <Compile Include="ClientAccounts.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Payment.cs" />
     <Compile Include="PaymentInstructionService.cs" />

@@ -5,10 +5,10 @@ namespace AnujBank
     public class Client
     {
         private readonly ClientId clientId;
-        private readonly Accounts holdings;
+        private readonly ClientAccounts holdings;
         private readonly Structures structures;
 
-        public Client(ClientId clientId, Accounts holdings)
+        public Client(ClientId clientId, ClientAccounts holdings)
         {
             this.clientId = clientId;
             this.holdings = holdings;

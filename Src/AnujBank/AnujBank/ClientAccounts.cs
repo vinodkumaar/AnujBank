@@ -2,11 +2,11 @@
 
 namespace AnujBank
 {
-    public class Accounts
+    public class ClientAccounts
     {
         private readonly Account[] _accounts;
 
-        public Accounts(params Account[] accounts)
+        public ClientAccounts(params Account[] accounts)
         {
             _accounts = accounts;
         }

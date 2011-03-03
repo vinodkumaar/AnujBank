@@ -4,12 +4,12 @@ namespace AnujBank
 {
     public class Structure
     {
-        private readonly Accounts sourceAccounts;
+        private readonly ClientAccounts sourceClientAccounts;
 
-        public Structure(Accounts sourceAccounts)
+        public Structure(ClientAccounts sourceClientAccounts)
         {
-            if(sourceAccounts.Count < 2) throw new ArgumentException("A structure must have at least 2 source accounts.");
-            this.sourceAccounts = sourceAccounts;
+            if(sourceClientAccounts.Count < 2) throw new ArgumentException("A structure must have at least 2 source accounts.");
+            this.sourceClientAccounts = sourceClientAccounts;
         }
     }
 }
