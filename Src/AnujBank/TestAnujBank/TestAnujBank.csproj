@@ -57,6 +57,7 @@
     <Compile Include="TestClientId.cs" />
     <Compile Include="TestClient.cs" />
     <Compile Include="TestStructures.cs" />
+    <Compile Include="TestTargetAccount.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AnujBank\AnujBank.csproj">
