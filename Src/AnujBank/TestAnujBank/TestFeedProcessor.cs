@@ -22,7 +22,7 @@ namespace TestAnujBank
         }
 
         [Test]
-        public void ShouldNotProcessFeedIsFileNotFound()
+        public void ShouldNotProcessFeedIfFileNotFound()
         {
             try
             {
