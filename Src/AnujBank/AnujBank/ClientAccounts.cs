@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace AnujBank
 {
@@ -8,10 +9,20 @@ namespace AnujBank
 
         public ClientAccounts(params Account[] accounts)
         {
-            _accounts = accounts;
+           Validate(accounts);
+           _accounts = accounts;
         }
 
-        public int Count
+       private static void Validate(Account[] accounts)
+       {
+          string clientId = accounts[0].GetClientId();
+          if(accounts.Any(account => account.GetClientId() != clientId))
+          {
+             throw new ArgumentException("Account from two different clients cannot be added.");
+          }
+       }
+
+       public int Count
         {
             get { return _accounts.Length; }
         }
